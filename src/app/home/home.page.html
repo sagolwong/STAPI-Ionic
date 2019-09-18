@@ -7,10 +7,15 @@
 </ion-header>
 
 <ion-content>
-    <h1>Names of People in Startrek</h1><br>
-    <p>[ Color black is Alive , Color gray is Dead ]</p><br>
-    <div *ngFor="let people of peoples">
+  <h1>Names of People in Startrek</h1><br>
+  <p>[ Color black is Alive , Color gray is Dead ]</p><br>
+  <div class="ion-padding">
+    <ion-item *ngFor="let people of peoples">
       <app-people [people]="people"></app-people>
-    </div>
-  
+    </ion-item>
+    <ion-infinite-scroll [disabled]="lastPage" (ionInfinite)="loadPage($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+  </div>
 </ion-content>
