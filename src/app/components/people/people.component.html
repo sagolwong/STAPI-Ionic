@@ -1,0 +1,12 @@
+<div>
+  <div *ngIf="people.deceased">
+    <p>
+      Character-Name: {{people.name}}
+    </p>
+  </div>
+  <div *ngIf="!people.deceased">
+    <p style="color: gray">
+      Character-Name:{{people.name}}
+    </p>
+  </div>
+</div>

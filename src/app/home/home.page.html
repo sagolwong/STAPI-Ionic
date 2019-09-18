@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      STARTREK
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <h1>Names of People in Startrek</h1><br>
+    <p>[ Color black is Alive , Color gray is Dead ]</p><br>
+    <div *ngFor="let people of peoples">
+      <app-people [people]="people"></app-people>
+    </div>
+  
 </ion-content>
